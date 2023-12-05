@@ -1,12 +1,15 @@
-import { getLista, limpaLista, adicionaNaLista } from "./lista.js"
+import { getLista, limpaLista, adicionaNaLista, removeDaLista } from "./lista.js"
 
 const olItens = document.querySelector("#itens")
 const pEntrada = document.querySelector("#entrada")
+const iSaida = document.querySelector("#saida")
 const btnAdicionar = document.querySelector("#adicionar")
 const btnLimpar = document.querySelector("#limpar")
+const btnRemover = document.querySelector("#remover")
 
 btnLimpar.addEventListener('click', limparItensDeLista)
 btnAdicionar.addEventListener('click', adicionarItensDeLista)
+btnRemover.addEventListener('click', removerItensDeLista)
 
 atualizarLista()
 
@@ -29,4 +32,15 @@ function adicionarItensDeLista() {
     adicionaNaLista(pEntrada.textContent)
     pEntrada.textContent = ""
     atualizarLista()
+}
+
+function removerItensDeLista() {
+    if(iSaida.value == '') {
+        alert("Uma posição deve ser digitada.")
+    }
+    else {
+        removeDaLista(Number(iSaida.value)-1)
+        iSaida.value = ""
+        atualizarLista()
+    }
 }

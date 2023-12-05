@@ -12,6 +12,6 @@ export function adicionaNaLista(elemento) {
     lista.push(elemento)
 }
 
-export function removeDaLista() {
-    
+export function removeDaLista(posicao) {
+    lista.splice(Number(posicao), 1)
 }

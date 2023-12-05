@@ -12,12 +12,15 @@
         <p>Esta é a página principal tem código JavaScript nela. Você deve iteragir com os elementos e ver o resultado na página.</p>
         <section>
             <h2>Lista</h2>
-            <p id="entrada" contenteditable>Item</p>
+            <h4>Escreva um item para adicionar na lista</h4>
+            <p id="entrada" contenteditable style="border: 1px solid black; width: 200px;">Item</p>
+            <h4>Escreva uma das posições listadas na lista para remover um item, ex: 1, 2, 3...</h4>
+            <input id="saida" style="border: 1px solid black; width: 200px; display: block; margin-bottom: 20px;"></input>
             <button id="adicionar">Adicionar</button>
             <button id="limpar">Limpar Lista</button>
+            <button id="remover">Remover da Lista</button>
             <ol id="itens"></ol>
         </section>
     </main>
-    
 </body>
 </html>
